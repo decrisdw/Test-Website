@@ -3,9 +3,11 @@
   <head>
     <title>Powerlifting Stats</title>
     <!-- Required meta tags -->
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+	<meta name="keywords" content="">
 	
 <!---- CSS Sources ---->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -53,14 +55,13 @@
 		<!-- Main jumbotron for a primary marketing message or call to action -->
 		<div class="jumbotron">
 			<div class="container">
-				<h1 class="display-3">Weight Lifting Stats</h1>
+				<h1 class="display-4">Weight Lifting Stats</h1>
 				<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-				<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
 			</div>
 		</div>
 
-		<div class="container">
-			<div class="row">
+		<div class="container stats_outerContainer">
+			<div class="row stats_innerContainer">
 				<div class="col-xs-12 col-sm-12 bench_outerContainer">
 					<h4>Bench</h4>
 					<div class="bench_weight">
@@ -68,7 +69,15 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-12 squat_outerContainer">
-					<h4>Squat</h4>
+					<form>
+						<div class="checkbox">
+							<label><input id="squat_checkbox" type="checkbox" value="">Squat</label>
+							<div class="squat_inputs_container">
+								<input id="squat_input_text" class="form-control" name="squat_input" type="text">&nbsp;<span id="errmsg"></span>
+								<input id="squat_input_button" type="submit" class="btn btn-info" value="Submit Button">
+							</div>
+						</div>
+					</form>
 					<div class="squat_weight">
 						<p class="squat_weight_text"></p>
 					</div>
@@ -80,6 +89,7 @@
 					</div>
 				</div>
 			</div>
+			<hr>
 		</div>
 	</main>
 	

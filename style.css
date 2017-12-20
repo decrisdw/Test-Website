@@ -1,3 +1,32 @@
 body {
   padding-top: 3.5rem;
 }
+.stats_innerContainer p {
+	padding-left:15px;
+}
+.checkbox label {
+	min-height: 20px;
+	padding-left: 20px;
+	margin-bottom: 0;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+	position: absolute;
+	line-height: normal;
+	margin: 4px 0px 0px -20px;
+}
+
+.squat_inputs_container {
+	/**display:none;**/
+}
+
+.squat_inputs_container .form-control {
+	margin-bottom:10px;
+	width:50%;
+}
+
+#errmsg {
+	color: red;
+}
