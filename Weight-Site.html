@@ -63,17 +63,25 @@
 		<div class="container stats_outerContainer">
 			<div class="row stats_innerContainer">
 				<div class="col-xs-12 col-sm-12 bench_outerContainer">
-					<h4>Bench</h4>
+					<form id="bench_form" class="lift_form">
+						<div class="lift_checkbox">
+							<label class="checkbox_label"><input id="bench_checkbox" type="checkbox" value="">Bench</label>
+							<div id="bench_inputs_container" class="inputs_container">
+								<input id="bench_input_text" class="form-control" name="bench_input" type="text" value="">&nbsp;<span id="errmsg"></span>
+								<input id="bench_input_button" type="submit" class="btn btn-info" value="Submit Button">
+							</div>
+						</div>
+					</form>
 					<div class="bench_weight">
 						<p class="bench_weight_text"></p>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-12 squat_outerContainer">
-					<form>
-						<div class="checkbox">
-							<label><input id="squat_checkbox" type="checkbox" value="">Squat</label>
-							<div class="squat_inputs_container">
-								<input id="squat_input_text" class="form-control" name="squat_input" type="text">&nbsp;<span id="errmsg"></span>
+					<form id="squat_form" class="lift_form">
+						<div class="lift_checkbox">
+							<label class="checkbox_label"><input id="squat_checkbox" type="checkbox" value="">Squat</label>
+							<div id="squat_inputs_container" class="inputs_container">
+								<input id="squat_input_text" class="form-control" name="squat_input" type="text" >&nbsp;<span id="errmsg"></span>
 								<input id="squat_input_button" type="submit" class="btn btn-info" value="Submit Button">
 							</div>
 						</div>
@@ -83,7 +91,15 @@
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-12 deadlift_outerContainer">
-					<h4>Deadlift</h4>
+					<form id="deadlift_form" class="lift_form">
+						<div class="lift_checkbox">
+							<label class="checkbox_label"><input id="deadlift_checkbox" type="checkbox" value="">Deadlift</label>
+							<div id="deadlift_inputs_container" class="inputs_container">
+								<input id="deadlift_input_text" class="form-control" name="deadlift_input" type="text" >&nbsp;<span id="errmsg"></span>
+								<input id="deadlift_input_button" type="submit" class="btn btn-info" value="Submit Button">
+							</div>
+						</div>
+					</form>
 					<div class="deadlift_weight">
 						<p class="deadlift_weight_text"></p>
 					</div>
