@@ -1,6 +1,9 @@
 
 $(document).ready(function(){
 	
+	var bench_array = [], squat_array = [], deadlift_array = [];
+	
+	
 	// Puts the text field IDs into an array and clears their fields on page load
 	var text_field_IDs = ["bench_input_text", "squat_input_text", "deadlift_input_text"];
 	
@@ -14,7 +17,8 @@ $(document).ready(function(){
 	//$('.deadlift_weight_text').text('450');
 
 	// Checks if a lift checkbox is checked
-	$('.checkbox_label input').prop('checked', false);
+			//change to false
+	$('.checkbox_label input').prop('checked', true);
 	
 	$('.checkbox_label input').change(function() {
 		var input_ID = $(this).attr('id');
@@ -34,11 +38,52 @@ $(document).ready(function(){
 		var submitted_ID = $(this).attr('id');
 		var submitted_string = submitted_ID.substr(0, submitted_ID.indexOf('_'));
 		
-		// Get the inputted squat value
+		// Get the inputted lift value
 		var lift_input = $('#' + submitted_ID + ' .form-control').val();
 		
-		// Set the inputted squat value
-		$('.' + submitted_string + '_weight_text').text(lift_input);
+		// emptys the current weight lifts div
+		$('.' + submitted_string + '_weight').empty();
+	
+		if (submitted_string == "bench") {
+			
+			// adds the lift amount to the array
+			bench_array.push(lift_input);
+			for (i = 0; i < bench_array.length; i++) {	
+				$('.' + submitted_string + '_weight').append('<span class="weight_span">' +  bench_array[i] + '</span>');
+			}
+			
+		}
+		else if (submitted_string == "squat") {
+			
+			// adds the lift amount to the array
+			squat_array.push(lift_input);
+			for (i = 0; i < squat_array.length; i++) {	
+				$('.' + submitted_string + '_weight').append('<span class="weight_span">' +  squat_array[i] + '</span>');
+			}
+			
+		}
+		else if (submitted_string == "deadlift") {
+		
+			// adds the lift amount to the array
+			deadlift_array.push(lift_input);
+			for (i = 0; i < deadlift_array.length; i++) {	
+				$('.' + submitted_string + '_weight').append('<span class="weight_span">' +  deadlift_array[i] + '</span>');
+			}
+			
+		}
+		
+		// Set the inputted lift value
+		//$('.' + submitted_string + '_weight_text').text();
+		
+		
+		/**for (i = 0; i < $(submitted_string + '_array').length; i++) {
+			
+			$('.' + submitted_string + '_weight_text').text((submitted_string + '_array')[i]);
+			
+		}**/
+		
+		
+		//$('.' + submitted_string + '_weight_text').text(lift_input);
 		
 		event.preventDefault();
 		

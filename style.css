@@ -19,7 +19,8 @@ body {
 }
 
 .inputs_container {
-	display:none;
+	/**change to none**/
+	display:block;
 }
 
 .inputs_container .form-control {
@@ -32,4 +33,7 @@ body {
 }
 #errmsg {
 	color: red;
+}
+.weight_span {
+	margin-left:10px;
 }
