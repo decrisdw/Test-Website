@@ -1,0 +1,39 @@
+body {
+  padding-top: 3.5rem;
+}
+.stats_innerContainer p {
+	padding-left:15px;
+}
+.lift_checkbox label {
+	min-height: 20px;
+	padding-left: 20px;
+	margin-bottom: 0;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.checkbox_label input[type="checkbox"] {
+	position: absolute;
+	line-height: normal;
+	margin: 4px 0px 0px -20px;
+}
+
+.inputs_container {
+	/**change to none**/
+	display:block;
+}
+
+.inputs_container .form-control {
+	margin-left:10px;
+	margin-bottom:10px;
+	width:50%;
+}
+.lift_form {
+	margin-bottom:15px;
+}
+#errmsg {
+	color: red;
+}
+.weight_span {
+	margin-left:10px;
+}
